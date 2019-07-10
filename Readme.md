@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Андрей Беляев](https://up.htmlacademy.ru/adaptive/17/user/1006885).
-* Наставник: `Неизвестно`.
+* Наставник: `Виктор Кан`.
 
 ---
 

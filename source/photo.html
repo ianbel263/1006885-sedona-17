@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <a class="page-header__logo">
+        <img class="page-header__logo-image" src="http://dummyimage.com/102x83/4d494d/686a82.gif&text=placeholder+image" width="102" height="83" alt="City of Sedona">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__button" type="button">Открыть/закрыть меню</button>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a class="site-list__link" href="index.html">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link site-list__item--active">Фото и видео</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="form.html">Форма отзыва</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive">HTML academy</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="banner banner--inner-page">
+        <img class="banner__image" src="http://dummyimage.com/230x40/4d494d/686a82.gif&text=placeholder+image" width="230" height="40" alt="Добро пожаловать в Седону!">
+      </div>
+    </header>
+
+    <main class="page-main">
+      <section class="gallery">
+        <header class="gallery__header section-header">
+          <h1 class="section-header__title">Фото и видео</h1>
+          <p class="section-header__intro">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+        </header>
+        <ul class="gallery__list">
+          <li class="gallery__item">
+            <a class="gallery__link" href="#">
+              <img class="gallery__photo" src="http://dummyimage.com/280x280/4d494d/686a82.gif&text=placeholder+image" width="280" height="280" alt="Неродные просторы">
+            </a>
+            <h2 class="gallery__photo-title">Неродные просторы</h2>
+            <p class="gallery__photo-author">Автор фото: <span class="gallery__photo-author-name">Борис</span></p>
+            <p class="gallery__photo-likes">
+              <button class="gallery__photo-like-button" type="button">Поставить лайк</button>
+              <span class="gallery__photo-likes-total">1350</span>
+            </p>
+          </li>
+          <li class="gallery__item">
+            <a class="gallery__link" href="#">
+              <img class="gallery__photo" src="http://dummyimage.com/280x280/4d494d/686a82.gif&text=placeholder+image" width="280" height="280" alt="Неродные просторы">
+            </a>
+            <h2 class="gallery__photo-title">Местная растительность</h2>
+            <p class="gallery__photo-author">Автор фото: <span class="gallery__photo-author-name">Сергей</span></p>
+            <p class="gallery__photo-likes">
+              <button class="gallery__photo-like-button" type="button">Поставить лайк</button>
+              <span class="gallery__photo-likes-total">143</span>
+            </p>
+          </li>
+          <li class="gallery__item">
+            <a class="gallery__link" href="#">
+              <img class="gallery__photo" src="http://dummyimage.com/280x280/4d494d/686a82.gif&text=placeholder+image" width="280" height="280" alt="Неродные просторы">
+            </a>
+            <h2 class="gallery__photo-title">Дорога на север</h2>
+            <p class="gallery__photo-author">Автор фото: <span class="gallery__photo-author-name">Петр</span></p>
+            <p class="gallery__photo-likes">
+              <button class="gallery__photo-like-button" type="button">Поставить лайк</button>
+              <span class="gallery__photo-likes-total">96</span>
+            </p>
+          </li>
+          <li class="gallery__item">
+            <a class="gallery__link" href="#">
+              <img class="gallery__photo" src="http://dummyimage.com/280x280/4d494d/686a82.gif&text=placeholder+image" width="280" height="280" alt="Неродные просторы">
+            </a>
+            <h2 class="gallery__photo-title">Мост Дьявола</h2>
+            <p class="gallery__photo-author">Автор фото: <span class="gallery__photo-author-name">Антон</span></p>
+            <p class="gallery__photo-likes">
+              <button class="gallery__photo-like-button" type="button">Поставить лайк</button>
+              <span class="gallery__photo-likes-total">254</span>
+            </p>
+          </li>
+        </ul>
+      </section>
+      <!-- <section class="video">
+        <h2 class="video__title">Все еще сомневаетесь?</h2>
+        <p class="video__intro">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожади в очереной раз!</p>
+        <video class="video__file" width="321" height="201">
+          <source src="#" type="">
+        </video>
+        <div class="video__controls">
+          <button class="video__button-again">Начать сначала</button>
+          <button class="video__button-cc">CC</button>
+          <button class="video__button-fullscreen">Полный экран</button>
+        </div>
+      </section> -->
+    </main>
+
+    <footer class="page-footer">
+      <span class="page-footer__hashtag">#visitSedona</span>
+      <div class="page-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--twitter" href="#">Наш твиттер</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="#">Мы в фейсбук</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--youtube" href="#">Мы на ю-тьюб</a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__copyright copyright">
+        <span class="copyright__by"></span>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTMLAcademy</a>
+      </div>
+    </footer>
+  </body>
+</html>

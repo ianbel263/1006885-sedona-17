@@ -37,7 +37,81 @@
           <h1 class="section-header__title">Оставьте свой отзыв</h1>
           <p class="section-header__intro">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         </header>
-
+        <form class="comments__form" action="https://echo.htmlacademy.ru" method="post">>
+          <fieldset class="comments__fieldset">
+            <legend class="comments__legend">Представьтесь:</legend>
+            <ul class="comments__fields-list">
+              <li class="comments__fields-item">
+                <label class="comments__label" for="name">Имя<sup>*</sup>:</label>
+                <input class="comments__input" type="text" name="name" id="name" placeholder="Петр" required>
+              </li>
+              <li class="comments__fields-item">
+                <label class="comments__label" for="surname">Фамилия<sup>*</sup>:</label>
+                <input class="comments__input" type="text" name="surname" id="surname" placeholder="Иванов" required>
+              </li>
+              <li class="comments__fields-item">
+                <label class="comments__label" for="patronymic">Отчество:</label>
+                <input class="comments__input" type="text" name="patronymic" id="patronymic" placeholder="Александрович">
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="comments__fieldset">
+            <legend class="comments__legend">Контактная информация:</legend>
+            <ul class="comments__fields-list">
+              <li class="comments__fields-item">
+                <label class="comments__label" for="tel">Контактный телефон<sup>*</sup>:</label>
+                <input class="comments__input comments__input--tel" type="tel" name="tel" id="tel" placeholder="Введите телефон" required>
+              </li>
+              <li class="comments__fields-item">
+                <label class="comments__label" for="email">Электронная почта<sup>*</sup>:</label>
+                <input class="comments__input comments__input--email" type="email" name="email" id="email" placeholder="Введите e-mail" required>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="comments__fieldset">
+            <legend class="comments__legend">Ваше общее впечатление:</legend>
+            <ul class="comments__fields-list">
+              <li comments__fields-item>
+                <input class="comments__input visually-hidden" type="radio" name="impression" id="impression" checked>
+                <label class="comments__label comments__label--radio" for="impression">Скорее положительное</label>
+              </li>
+              <li comments__fields-item>
+                <input class="comments__input visually-hidden" type="radio" name="impression" id="impression">
+                <label class="comments__label comments__label--radio" for="impression">Скорее отрицательное</label>
+              </li>
+              <li comments__fields-item>
+                <input class="comments__input visually-hidden" type="radio" name="impression" id="impression">
+                <label class="comments__label comments__label--radio" for="impression">Затрудняюсь ответить</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="comments__fieldset">
+            <legend class="comments__legend">Посещенные достопримечательности:</legend>
+            <ul>
+              <li>
+                <input class="comments__input visually-hidden" name="devil's-bridge" id="devil's-bridge" type="checkbox" checked>
+                <label class="comments__label comments__label--checkbox" for="devil's-bridge">Мост Дьявола</label>
+              </li>
+              <li>
+                <input class="comments__input visually-hidden" name="bell-mountain" id="bell-mountain" type="checkbox" checked>
+                <label class="comments__label comments__label--checkbox" for="bell-mountain">Гора-Колокол</label>
+              </li>
+              <li>
+                <input class="comments__input visually-hidden" name="slide-park" id="slide-park" type="checkbox" checked>
+                <label class="comments__label comments__label--checkbox" for="slide-park">Слайд-парк</label>
+              </li>
+              <li>
+                <input class="comments__input visually-hidden" name="red-rocks" id="red-rocks" type="checkbox">
+                <label class="comments__label comments__label--checkbox" for="red-rocks">Красные скалы</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="comments__fieldset">
+            <legend class="comments__legend">Опишите свои эмоции:</legend>
+            <textarea class="comments__textarea" name="emotions" placeholder="Опишите подробно все свои восторги"></textarea>
+          </fieldset>
+          <button class="comments__button button" type="submit">Отправить отзыв</button>
+        </form>
       </section>
     </main>
 

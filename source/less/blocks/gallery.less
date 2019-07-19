@@ -1,5 +1,7 @@
 .gallery {
-  padding: 44px 0 0;
+  width: 280px;
+  margin: 0 auto;
+  margin-top: 40px;
 }
 
 .gallery__header {
@@ -9,12 +11,13 @@
 
 .gallery__list {
   .ul-normalize;
+  //padding: 0 22px;
 }
 
 .gallery__item {
   padding: 22px 0;
 
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid #e5e5e5; //вставить псевдоэлементом
 
   &:last-child {
     border-bottom: 1px solid #e5e5e5;
@@ -24,7 +27,6 @@
 .gallery__photo {
   display: block;
   margin-bottom: 15px;
-  //margin: 0 auto;
 }
 
 .gallery__photo-title {
@@ -46,4 +48,46 @@
   margin: 0;
 
   font-weight: 700;
+}
+
+@media (min-width: @tablet-width) {
+  .gallery {
+    width: 648px;
+  }
+
+  .gallery__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .gallery__item {
+    width: 50%;
+    border: none; //потом убрать псевдоэлементы
+
+    &:first-child {
+      width: 100%;
+
+      .gallery__photo {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .gallery {
+    width: 100%;
+  }
+
+  .gallery__item {
+    width: 33%;
+
+    &:first-child {
+      width: 100%;
+
+      .gallery__photo {
+        width: 100%;
+      }
+    }
+  }
 }

@@ -16,5 +16,19 @@
 
 .features__detail {
   margin: 0;
+
   color: @paragraph-font-color;
+}
+
+@media (min-width: @tablet-width) {
+  .features__list {
+    display: flex;
+  }
+
+  .features__item {
+    width: 33%;
+    min-height: 330px;
+
+    text-align: center;
+  }
 }

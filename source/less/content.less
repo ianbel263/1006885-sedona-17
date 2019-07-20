@@ -1,6 +1,5 @@
 body {
-  width: 320px;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
 
   font-weight: 400;
@@ -11,11 +10,17 @@ body {
   text-transform: uppercase;
 
   background-color: @main-bg-color;
-  border: 1px solid #e5e5e5;
 }
 
 a {
   text-decoration: none;
+}
+
+.container {
+  width: 500px;
+  margin: 0 auto;
+
+  border: 1px solid #e5e5e5;
 }
 
 // img {
@@ -43,8 +48,9 @@ input[type="radio"].visually-hidden {
 }
 
 @media (min-width: @tablet-width) {
-  body {
-    width: 100%;
+  .container {
+    width: 768px;
+
     border: none;
   }
 }
@@ -52,7 +58,7 @@ input[type="radio"].visually-hidden {
 @media (min-width: @desktop-width) {
   .container {
     width: 1200px;
-    margin: 0 auto;
+
     box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.2);
   }
 }

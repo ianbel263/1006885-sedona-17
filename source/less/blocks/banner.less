@@ -1,9 +1,12 @@
 .banner {
+  display: flex;
   height: 389px;
+  margin-top: -27px;
+
   background-color: @reasons-with-image-bg-color;
   background-image: url("../../img/bg-back-mobile@1x.jpg");
-  background-position: center center;
   background-repeat: no-repeat;
+  background-position: center center;
 
   &--inner-page {
     height: 158px;
@@ -12,5 +15,11 @@
 
 .banner__image {
   display: block;
-  margin: 0 auto;
+  margin: auto;
+}
+
+@media (min-width: @tablet-width) {
+  .banner {
+    margin-top: 0;
+  }
 }

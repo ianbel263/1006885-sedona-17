@@ -11,6 +11,21 @@
 }
 
 .site-list__link {
-  padding: 15px 0;
+  display: block;
+  padding: 8px 0;
   color: inherit;
+}
+
+@media (min-width: @tablet-width) {
+  .site-list__item {
+    width: 20%;
+
+    &:nth-child(3) {
+      margin-left: auto;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  //
 }

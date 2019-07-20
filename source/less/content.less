@@ -10,12 +10,23 @@ body {
   text-transform: uppercase;
 
   background-color: @main-bg-color;
-  border: 1px solid #e5e5e5;
 }
 
 a {
   text-decoration: none;
 }
+
+.container {
+  width: 500px;
+  margin: 0 auto;
+
+  border: 1px solid #e5e5e5;
+}
+
+// img {
+//   max-width: 100%;
+//   height: auto;
+// }
 
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
@@ -34,4 +45,20 @@ input[type="radio"].visually-hidden {
 
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
+}
+
+@media (min-width: @tablet-width) {
+  .container {
+    width: 768px;
+
+    border: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .container {
+    width: 1200px;
+
+    box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.2);
+  }
 }

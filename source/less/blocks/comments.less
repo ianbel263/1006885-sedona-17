@@ -1,6 +1,7 @@
 .comments {
-  padding: 0 20px;
   margin-bottom: 15px;
+  padding: 0 20px;
+
   text-align: center;
 }
 
@@ -16,21 +17,7 @@
   }
 }
 
-.comments__fieldset {
-  width: 100%;
-  margin: 0;
-  padding: 15px 0 25px;
-
-  border: none;
-
-  &--impression,
-  &--landmarks {
-    padding: 20px 0 32px;
-  }
-}
-
 .comments__legend {
-  // width: 280px;
   margin-bottom: 10px;
   padding-top: 20px;
 
@@ -40,27 +27,12 @@
   color: @main-font-color;
 }
 
-.comments__fieldset {
-  &--contacts {
-    .comments__legend {
-      margin-bottom: 5px;
-    }
-  }
-
-  &--landmarks,
-  &--emotions {
-    .comments__legend {
-      margin-bottom: 0;
-    }
-  }
-}
-
 .comments__fields-list {
-  .ul-normalize;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  .ul-normalize;
 }
 
 .comments__fields-item {
@@ -74,25 +46,50 @@
   }
 }
 
-.comments__fieldset--contacts {
-  .comments__fields-item {
-    flex-direction: column;
-    margin-bottom: 15px;
+.comments__fieldset {
+  width: 100%;
+  margin: 0;
+  padding: 15px 0 25px;
 
-    &:last-child {
-      margin-bottom: 0;
+  border: none;
+
+  &--impression,
+  &--landmarks {
+    padding: 20px 0 32px;
+  }
+
+  &--contacts {
+    .comments__legend {
+      margin-bottom: 5px;
+    }
+
+    .comments__fields-item {
+      flex-direction: column;
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .comments__label {
+      margin-bottom: 7px;
+      margin-left: 22px;
+      padding: 0;
     }
   }
 
-  .comments__label {
-  padding: 0;
-  margin-left: 22px;
-  margin-bottom: 7px;
+  &--landmarks,
+  &--emotions {
+    .comments__legend {
+      margin-bottom: 0;
+    }
   }
 }
 
 .comments__fieldset--landmarks {
   padding-bottom: 0;
+
   .comments__fields-item {
     margin-bottom: 32px;
   }
@@ -104,8 +101,8 @@
 
 .comments__input,
 .comments__textarea {
-  width: 100%;
   box-sizing: border-box;
+  width: 100%;
   padding: 15px 22px;
 
   font: inherit;
@@ -125,9 +122,10 @@
 .comments__label {
   margin-right: 15px;
   padding: 15px 0;
-  text-align: left;
+
   font-size: 14px;
   line-height: 26px;
+  text-align: left;
   color: @paragraph-font-color;
 
   sup {
@@ -137,28 +135,29 @@
 
   &--checkbox,
   &--radio {
-    padding: 11px 0;
-    padding-left: 80px;
     position: relative;
     // margin-left: 80px;
+
     margin-right: 0;
+    padding: 11px 0;
+    padding-left: 80px;
+
     font-weight: 700;
     font-size: 18px;
     color: @main-font-color;
     text-transform: none;
-  }
-}
 
-.comments__label--radio,
-.comments__label--checkbox {
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 46px;
-    height: 46px;
-    background-color: @gallery-wrapper-bg-color;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 46px;
+      height: 46px;
+
+      background-color: @gallery-wrapper-bg-color;
+    }
   }
 }
 
@@ -168,14 +167,16 @@
   }
 
   &::after {
-    display: none;
     content: "";
     position: absolute;
     top: 50%;
     left: 15px;
-    margin-top: -9px;
+
+    display: none;
     width: 16px;
     height: 16px;
+    margin-top: -9px;
+
     background-color: @paragraph-font-color;
     border-radius: 50%;
   }
@@ -183,17 +184,19 @@
 
 .comments__label--checkbox {
   &::after {
-    display: none;
     content: "";
     position: absolute;
     top: 50%;
     left: 11px;
-    margin-top: -8px;
+
+    display: none;
     width: 24px;
     height: 16px;
+    margin-top: -8px;
+
     background-image: url("../../img/icon-tick.svg");
-    background-position: center center;
     background-repeat: no-repeat;
+    background-position: center center;
   }
 }
 
@@ -219,19 +222,21 @@
 
 @media (min-width: @tablet-width) {
   .comments {
-    padding: 20px 60px;
-    margin-bottom: 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: 50px;
+    padding: 20px 60px;
   }
 
   .comments__header {
+    order: -2;
     width: 440px;
     margin-bottom: 75px;
-    order: -2;
+
     .section-header__title {
       margin-bottom: 30px;
+
       font-size: 30px;
     }
   }
@@ -246,14 +251,16 @@
   }
 
   .comments__fieldset--impression {
-    border: none;
-    width: 43%;
     order: -1;
+    width: 43%;
+
+    border: none;
 
     .comments__legend {
       width: auto;
-      text-align: left;
       margin-bottom: 45px;
+
+      text-align: left;
     }
 
     .comments__fields-item {
@@ -262,31 +269,36 @@
   }
 
   .comments__fieldset--name {
-    margin-bottom: 50px;
-    border: none;
     width: 41%;
+    margin-bottom: 50px;
+
+    border: none;
 
     .comments__legend {
       width: auto;
-      text-align: left;
       margin-bottom: 45px;
+
+      text-align: left;
     }
   }
 
   .comments__fieldset--contacts {
     margin-bottom: 32px;
+
     .comments__fields-item:first-child {
       margin-bottom: 25px;
     }
   }
 
   .comments__fieldset--landmarks {
-    padding-left: 96px;
-    padding-right: 33px;
     margin-bottom: 32px;
+    padding-right: 33px;
+    padding-left: 96px;
+
     .comments__legend {
       margin-bottom: 26px;
     }
+
     .comments__fields-list {
       flex-direction: row;
       flex-wrap: wrap;
@@ -301,6 +313,7 @@
 
   .comments__fieldset--emotions {
     margin-bottom: 23px;
+
     .comments__legend {
       margin-bottom: 45px;
     }
@@ -316,21 +329,23 @@
   }
 
   .comments__footnote {
-    padding: 16px 0;
     display: block;
+    padding: 16px 0;
+
     color: @paragraph-font-color;
   }
 }
 
 @media (min-width: @desktop-width) {
   .comments {
-    padding-left: 120px;
+    margin-bottom: 60px;
     padding-right: 120px;
-    margin-bottom: 60px;
+    padding-left: 120px;
   }
+
   .comments__header {
-    margin-bottom: 60px;
     width: 100%;
+    margin-bottom: 60px;
 
     .section-header__intro {
       width: 440px;
@@ -340,8 +355,10 @@
 
   .comments__fieldset--impression {
     width: 400px;
+
     .comments__legend {
       padding-left: 35px;
+
       text-align: center;
     }
   }
@@ -352,6 +369,7 @@
 
   .comments__fieldset--contacts {
     margin-bottom: 3px;
+
     .comments__legend {
       margin-bottom: 56px;
     }
@@ -361,9 +379,9 @@
     }
 
     .comments__fields-item {
-      width: 50%;
       flex-direction: row;
       align-items: flex-start;
+      width: 50%;
 
       &--tel {
         width: 400px;
@@ -378,6 +396,7 @@
       margin: 0;
       margin-right: 16px;
       padding: 15px 0;
+
       white-space: nowrap;
     }
   }

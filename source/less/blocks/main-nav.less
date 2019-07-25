@@ -1,5 +1,6 @@
 .main-nav {
   color: @reasons-with-image-font-color;
+
   background-color: @reasons-with-image-bg-color;
 
   &--closed {
@@ -15,7 +16,7 @@
   }
 }
 
-.main-nav__list .site-list__link[href]{
+.main-nav__list .site-list__link[href] {
   &:hover,
   &:focus {
     background-color: @link-hover-bg-color;
@@ -23,6 +24,7 @@
 
   &:active {
     color: @link-active-color;
+
     background-color: @link-active-bg-color;
   }
 }
@@ -30,7 +32,9 @@
 @media (min-width: @tablet-width) {
   .main-nav {
     display: block;
+
     color: @main-font-color;
+
     background-color: @main-bg-color;
   }
 
@@ -42,11 +46,13 @@
     &:hover,
     &:focus {
       color: @reasons-with-image-bg-color;
+
       background-color: @main-bg-color;
     }
 
     &:active {
-      color: rgba(0,0,0,0.3);
+      color: @link-active-color;
+
       background-color: @main-bg-color;
     }
   }

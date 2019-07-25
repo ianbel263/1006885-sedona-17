@@ -2,6 +2,7 @@
   display: flex;
   height: 389px;
   margin-top: -27px;
+  margin-bottom: 39px;
 
   background-color: @reasons-with-image-bg-color;
   background-image: url("../../img/bg-back-mobile@1x.jpg");
@@ -20,6 +21,23 @@
 
 @media (min-width: @tablet-width) {
   .banner {
+    height: 518px;
     margin-top: 0;
+    margin-bottom: 55px;
+    background-size: cover;
+
+    &--inner-page {
+      height: 290px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .banner {
+    margin-bottom: 50px;
+
+    &--inner-page {
+      margin-bottom: 103px;
+    }
   }
 }

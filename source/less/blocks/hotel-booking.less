@@ -4,10 +4,61 @@
 
 .hotel-booking__header {
   margin-bottom: 35px;
+
+  .section-header__title {
+    font-size: 21px;
+    line-height: 26px;
+    margin-bottom: 20px;
+  }
+
+  .section-header__intro {
+    font-size: 14px;
+    line-height: 24px;
+  }
 }
 
 .hotel-booking__button {
   width: 280px;
   margin: 0 auto;
   padding: 16px 0;
+
+  &:hover,
+  &:focus {
+    background-color: @link-hover-bg-color;
+  }
+
+  &:active {
+    color: @link-active-color;
+    background-color: @link-active-bg-color;
+  }
+
+  // &:disabled {
+  //   background-color: @button-disabled-bg-color;
+  // }
+}
+
+@media (min-width: @tablet-width) {
+  .hotel-booking {
+    margin-bottom: 60px;
+  }
+
+  .hotel-booking__header {
+    width: 440px;
+    margin-bottom: 40px;
+
+    .section-header__title {
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .hotel-booking__button {
+    width: 458px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .hotel-booking {
+    margin-bottom: 70px;
+  }
 }

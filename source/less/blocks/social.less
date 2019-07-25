@@ -1,3 +1,36 @@
 .social__list {
   .ul-normalize;
+  display: flex;
+  flex-wrap: wrap;
+  width: 155px;
+}
+
+.social__item {
+
+  width: 46px;
+  height: 48px;
+  background-color: @reasons-with-image-bg-color;
+  margin-right: 6px;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  &:hover,
+  &:focus {
+    background-color: @link-hover-bg-color;
+  }
+
+  &:active {
+    background-color: @link-active-bg-color;
+    opacity: 0.3;
+  }
 }

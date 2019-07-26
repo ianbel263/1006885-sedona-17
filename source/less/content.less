@@ -17,8 +17,8 @@ a {
 }
 
 .container {
+  width: 100%;
   min-width: 320px;
-  max-width: 500px;
   margin: 0 auto;
 
   // border: 1px solid #e5e5e5;
@@ -50,7 +50,7 @@ input[type="radio"].visually-hidden {
 
 @media (min-width: @tablet-width) {
   .container {
-    max-width: 768px;
+    width: 768px;
 
     // border: none;
   }
@@ -58,7 +58,7 @@ input[type="radio"].visually-hidden {
 
 @media (min-width: @desktop-width) {
   .container {
-    max-width: 1200px;
+    width: 1200px;
 
     box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.2);
   }

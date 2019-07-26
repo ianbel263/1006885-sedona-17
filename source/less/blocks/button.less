@@ -12,4 +12,18 @@
   text-transform: uppercase;
 
   border: none;
+
+  &:hover,
+  &:focus {
+    background-color: @link-hover-bg-color;
+  }
+
+  &:active {
+    color: @link-active-color;
+    background-color: @link-active-bg-color;
+  }
+
+  &:disabled {
+    background-color: @button-disabled-bg-color;
+  }
 }

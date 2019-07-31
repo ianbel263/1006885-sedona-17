@@ -1,18 +1,21 @@
 .site-list {
-  .ul-normalize;
   font-weight: 700;
   font-size: 18px;
   line-height: 40px;
+
+  .ul-normalize;
 }
 
 .site-list__item {
   text-align: center;
+
   box-shadow: 0 1px 0 0 rgba(1, 1, 1, 0.2);
 }
 
 .site-list__link {
   display: block;
   padding: 8px 0;
+
   color: inherit;
 }
 
@@ -29,6 +32,8 @@
   .site-list__item {
     width: 20%;
 
+    box-shadow: none;
+
     &:nth-child(3) {
       margin-left: auto;
     }
@@ -36,5 +41,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  //
+  .site-list__link {
+    padding: 14px 0;
+  }
 }

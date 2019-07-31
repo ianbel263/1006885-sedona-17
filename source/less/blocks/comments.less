@@ -1,5 +1,5 @@
 .comments {
-  margin-bottom: 15px;
+  margin-bottom: 35px;
   padding: 0 20px;
 
   text-align: center;
@@ -18,7 +18,7 @@
 }
 
 .comments__legend {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   padding-top: 20px;
 
   font-weight: 700;
@@ -36,18 +36,44 @@
 }
 
 .comments__fields-item {
+  position: relative;
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  &--tel::after,
+  &--email::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    width: 58px;
+    height: 58px;
+
+    background-color: @input-icon-bg-color;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &--tel::after {
+    background-image: url("../../img/icon-phone.svg");
+  }
+
+  &--email::after {
+    background-image: url("../../img/icon-mail.svg");
   }
 }
 
 .comments__fieldset {
   position: relative;
+
   width: 100%;
   margin: 0;
   padding: 15px 0 25px;
@@ -56,7 +82,31 @@
 
   &--impression,
   &--landmarks {
-    padding: 20px 0 32px;
+    padding: 20px 0 28px;
+  }
+
+  &--impression {
+    .comments__fields-item {
+      margin-bottom: 12px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &--landmarks {
+    .comments__fields-list {
+      margin-top: -5px;
+    }
+
+    .comments__fields-item {
+      margin-bottom: 23px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 
   &--contacts {
@@ -89,12 +139,14 @@
 
   &::before,
   &::after {
-    position: absolute;
     content: "";
+    position: absolute;
+    left: 50%;
+
     width: 320px;
     height: 1px;
+
     background-color: @gallery-wrapper-bg-color;
-    left: 50%;
     transform: translateX(-50%);
   }
 
@@ -104,6 +156,7 @@
 
   &::after {
     bottom: 0;
+
     display: none;
   }
 
@@ -112,23 +165,23 @@
   }
 }
 
-.comments__fieldset--landmarks {
-  padding-bottom: 0;
+// .comments__fieldset--landmarks {
+//   padding-bottom: 0;
 
-  .comments__fields-item {
-    margin-bottom: 32px;
-  }
+//   .comments__fields-item {
+//     margin-bottom: 32px;
+//   }
 
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
+//   &:last-child {
+//     margin-bottom: 0;
+//   }
+// }
 
 .comments__input,
 .comments__textarea {
   box-sizing: border-box;
   width: 100%;
-  padding: 11px 22px;
+  padding: 12px 20px;
 
   font: inherit;
   font-weight: 700;
@@ -138,6 +191,11 @@
 
   background-color: @input-bg-color;
   border: 4px solid transparent;
+
+  &--tel,
+  &--email {
+    padding-right: 60px;
+  }
 
   &::placeholder {
     color: @main-font-color;
@@ -175,7 +233,7 @@
     position: relative;
 
     margin-right: 0;
-    padding: 11px 0;
+    padding: 15px 0;
     padding-left: 80px;
 
     font-weight: 700;
@@ -189,8 +247,8 @@
       top: 0;
       left: 0;
 
-      width: 46px;
-      height: 46px;
+      width: 56px; //потом проверить
+      height: 56px;
 
       background-color: @gallery-wrapper-bg-color;
     }
@@ -205,13 +263,12 @@
   &::after {
     content: "";
     position: absolute;
-    top: 50%;
-    left: 15px;
+    top: 16px;
+    left: 17px;
 
     display: none;
-    width: 16px;
-    height: 16px;
-    margin-top: -9px;
+    width: 22px;
+    height: 22px;
 
     background-color: @paragraph-font-color;
     border-radius: 50%;
@@ -223,7 +280,7 @@
     content: "";
     position: absolute;
     top: 50%;
-    left: 11px;
+    left: 16px;
 
     display: none;
     width: 24px;
@@ -261,7 +318,7 @@
 
 .comments__button {
   width: 280px;
-  margin: 20px auto 45px;
+  margin: 20px auto 0;
   padding: 16px;
 
   cursor: pointer;
@@ -276,7 +333,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     padding: 20px 60px;
   }
 
@@ -305,6 +362,14 @@
       width: 400px;
       padding: 0;
     }
+
+    .comments__fields-item {
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 
   .comments__fieldset--impression {
@@ -320,25 +385,27 @@
       text-align: left;
     }
 
-    .comments__fields-item {
-      margin-bottom: 28px;
-    }
+    // .comments__fields-item {
+    //   margin-bottom: 20px;
+    // }
 
     &::after {
-      position: absolute;
-      display: block;
       content: "";
-      width: 1px;
-      height: 292px;
-      background-color: @gallery-wrapper-bg-color;
+      position: absolute;
       top: 2%;
       left: 116%;
+
+      display: block;
+      width: 1px;
+      height: 292px;
+
+      background-color: @gallery-wrapper-bg-color;
     }
   }
 
   .comments__fieldset--name {
     width: 41%;
-    margin-bottom: 50px;
+    margin-bottom: 45px;
 
     border: none;
 
@@ -351,15 +418,27 @@
   }
 
   .comments__fieldset--contacts {
-    margin-bottom: 32px;
+    margin-bottom: 5px;
 
-    .comments__fields-item:first-child {
+    .comments__legend {
+      margin-bottom: 10px;
+    }
+
+    .comments__fields-list {
       margin-bottom: 25px;
+    }
+
+    .comments__fields-item {
+      margin-bottom: 23px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 
   .comments__fieldset--landmarks {
-    margin-bottom: 32px;
+    margin-bottom: 10px;
     padding-right: 33px;
     padding-left: 96px;
 
@@ -375,15 +454,15 @@
 
     .comments__fields-item {
       width: 50%;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
   }
 
   .comments__fieldset--emotions {
-    margin-bottom: 23px;
+    margin-bottom: 25px;
 
     .comments__legend {
-      margin-bottom: 45px;
+      margin-bottom: 42px;
     }
   }
 
@@ -406,7 +485,7 @@
 
 @media (min-width: @desktop-width) {
   .comments {
-    margin-bottom: 60px;
+    margin-bottom: 45px;
     padding-right: 120px;
     padding-left: 120px;
   }
@@ -418,6 +497,12 @@
     .section-header__intro {
       width: 440px;
       margin: 0 auto;
+    }
+  }
+
+  .comments__fieldset {
+    .comments__legend {
+      margin-bottom: 40px;
     }
   }
 
@@ -444,7 +529,7 @@
     margin-bottom: 3px;
 
     .comments__legend {
-      margin-bottom: 56px;
+      margin-bottom: 59px;
     }
 
     .comments__fields-list {
@@ -455,6 +540,7 @@
       flex-direction: row;
       align-items: flex-start;
       width: 50%;
+      margin-bottom: 0;
 
       &--tel {
         width: 400px;
@@ -475,6 +561,7 @@
   }
 
   .comments__fieldset--landmarks {
+    margin-bottom: 40px;
     padding: 0;
 
     .comments__legend {

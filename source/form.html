@@ -157,11 +157,29 @@
         <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="copyright__by">Разработано</span>
           <svg width="60" height="60">
-            <use xlink:href="img/sprite.svg#icon-HTMLAcademy"></use>
+            <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
           </svg>
           <span class="visually-hidden">HTMLAcademy</span>
         </a>
       </footer>
+
+      <section class="modal modal--failure">
+        <h2 class="modal__title">Что-то пошло не так!</h2>
+        <p class="modal__text">Проверьте поля, выделенные красным, скорее всего Вы забыли их заполнить</p>
+        <button class="modal__button button">Ок</button>
+      </section>
+
+      <section class="modal modal--success">
+        <div class="modal__wrapper modal__wrapper--top">
+          <h2 class="modal__title">Ваш отзыв отправлен!</h2>
+          <p class="modal__text">Спасибо за Ваше участие, Ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+        </div>
+        <div class="modal__wrapper modal__wrapper--bottom">
+          <button class="modal__button modal__button--success button">Закрыть окно</button>
+        </div>
+      </section>
+
+      <div class="overlay"></div>
       <script src="js/script.js"></script>
     </div>
   </body>

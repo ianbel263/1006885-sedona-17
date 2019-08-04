@@ -1,7 +1,13 @@
 .map {
+  position: relative;
   width: 320px;
   margin: 0 auto;
-  //margin-bottom: 10px;
+}
+
+.map__marker {
+  position: absolute;
+  top: 45%;
+  left: 45%;
 }
 
 .map__image {
@@ -13,6 +19,10 @@
     width: 100%;
   }
 
+  .map__marker {
+    left: 48%;
+  }
+
   .map__image {
     width: 100%;
   }
@@ -21,6 +31,11 @@
 @media (min-width: @desktop-width) {
   .map {
     width: 1200px;
+  }
+
+  .map__marker {
+    top: 47%;
+    left: 49%;
   }
 
   .map__image {

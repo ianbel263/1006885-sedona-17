@@ -1,28 +1,30 @@
 .modal {
   position: fixed;
   left: 50%;
+  z-index: 30;
 
   box-sizing: border-box;
-  width: 320px; //добавить тень
+  width: 320px;
   padding: 45px 50px 35px;
 
   text-align: center;
   color: @main-font-color;
 
   background-color: @main-bg-color;
+  box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
   transform: translateX(-50%);
-  z-index: 30;
-  // outline: 1px solid black;
 
   &--failure {
-    display: none;
     bottom: 220px;
+
+    display: none;
   }
 
   &--success {
+    bottom: 120px;
+
     display: none;
     padding: 0;
-    bottom: 120px;
   }
 }
 
@@ -61,6 +63,7 @@
 
   &--bottom {
     padding: 20px;
+
     background-color: @gallery-wrapper-bg-color;
 
     .modal__button {
@@ -83,6 +86,7 @@
   .modal__title {
     width: 255px;
     margin: 0 auto 25px;
+
     font-size: 30px;
     line-height: 40px;
   }

@@ -1,24 +1,42 @@
 .map {
   position: relative;
-  width: 320px;
-  margin: 0 auto;
+
+  width: 100%;
+  height: 350px;
 }
 
 .map__marker {
   position: absolute;
   top: 45%;
   left: 45%;
+  z-index: 5;
 }
 
 .map__image {
-  height: 350px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+
+  display: block;
+  width: 320px;
+  height: 100%;
+}
+
+.map__interactive {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  width: 100%;
+  height: 100%;
+
+  border: none;
 }
 
 @media (min-width: @tablet-width) {
-  .map {
-    width: 100%;
-  }
-
   .map__marker {
     left: 48%;
   }
@@ -29,16 +47,8 @@
 }
 
 @media (min-width: @desktop-width) {
-  .map {
-    width: 1200px;
-  }
-
   .map__marker {
     top: 47%;
     left: 49%;
-  }
-
-  .map__image {
-    width: 1200px;
   }
 }

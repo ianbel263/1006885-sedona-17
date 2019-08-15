@@ -17,14 +17,3 @@ navToggle.addEventListener('click', function() {
     navToggle.classList.remove('page-header__button--menu-opened');
   }
 });
-
-var formComments = document.querySelector('.comments');
-var emailInput = formComments.querySelector('.comments__input--email');
-var popupFailture = document.querySelector('.modal--failure');
-
-formComments.addEventListener('submit', function(evt) {
-  if (!emailInput.validity.valid) {
-    evt.preventDefault();
-    popupFailture.classList.add('modal--show');
-  }
-});

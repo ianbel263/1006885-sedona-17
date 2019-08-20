@@ -8,11 +8,11 @@
 .comments__header {
   margin-bottom: 17px;
 
-  .section-header__title {
+  &-title {
     margin-bottom: 25px;
   }
 
-  .section-header__intro {
+  &-intro {
     line-height: 24px;
   }
 }
@@ -333,16 +333,17 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 40px;
+    margin-bottom: 45px;
     padding: 20px 60px;
   }
 
   .comments__header {
     order: -2;
     width: 440px;
+    // margin-top: 5px;
     margin-bottom: 75px;
 
-    .section-header__title {
+    &-title {
       margin-bottom: 30px;
 
       font-size: 30px;
@@ -368,6 +369,12 @@
 
       &:last-child {
         margin-bottom: 0;
+      }
+    }
+
+    &--landmarks {
+      .comments__fields-item:last-child {
+        margin-bottom: 30px;
       }
     }
   }
@@ -485,7 +492,7 @@
 
 @media (min-width: @desktop-width) {
   .comments {
-    margin-bottom: 45px;
+    // margin-bottom: 45px;
     padding-right: 120px;
     padding-left: 120px;
   }
@@ -494,7 +501,7 @@
     width: 100%;
     margin-bottom: 60px;
 
-    .section-header__intro {
+    &-intro {
       width: 440px;
       margin: 0 auto;
     }

@@ -6,11 +6,11 @@
   margin-bottom: 30px;
   padding: 0 23px;
 
-  .section-header__title {
+  &-title {
     margin-bottom: 22px;
   }
 
-  .section-header__intro {
+  &-intro {
     line-height: 24px;
   }
 }
@@ -101,7 +101,8 @@
 
 @media (min-width: @tablet-width) {
   .gallery {
-    margin-bottom: 70px;
+    margin-top: 80px;
+    margin-bottom: 65px;
   }
 
   .gallery__header {
@@ -109,8 +110,7 @@
     margin-bottom: 70px;
     padding: 0;
 
-    .section-header__title {
-      margin-top: 75px;
+    &-title {
       margin-bottom: 30px;
 
       font-size: 30px;
@@ -182,10 +182,9 @@
 }
 
 @media (min-width: @desktop-width) {
-  .gallery__header {
-    .section-header__title {
-      margin-top: 117px;
-    }
+  .gallery {
+    margin-top: 117px;
+    margin-bottom: 70px;
   }
 
   .gallery__list {

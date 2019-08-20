@@ -5,14 +5,16 @@
 .hotel-booking__header {
   margin-bottom: 35px;
 
-  .section-header__title {
+  &-title {
     margin-bottom: 20px;
 
     font-size: 21px;
     line-height: 26px;
   }
 
-  .section-header__intro {
+  &-intro {
+    padding-left: 15px;
+    padding-right: 15px;
     font-size: 14px;
     line-height: 24px;
   }
@@ -30,13 +32,17 @@
   }
 
   .hotel-booking__header {
-    width: 440px;
+    width: 450px;
     margin-bottom: 40px;
 
-    .section-header__title {
+    &-title {
       margin-bottom: 30px;
 
       font-size: 30px;
+    }
+
+    &-intro {
+      padding: 0;
     }
   }
 
@@ -46,6 +52,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .hotel-booking {
+    margin-bottom: 68px;
+  }
+
   .hotel-booking__header {
     margin-bottom: 45px;
   }

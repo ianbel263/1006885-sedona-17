@@ -8,6 +8,7 @@
 
 .features__list {
   .ul-normalize;
+  max-width: 320px;
 }
 
 .features__item {
@@ -82,6 +83,7 @@
   }
 
   .features__list {
+    max-width: 768px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -137,6 +139,10 @@
 @media (min-width: @desktop-width) {
   .features {
     padding-bottom: 85px;
+  }
+
+  .features__list {
+    max-width: 1200px;
   }
 
   .features__item {
